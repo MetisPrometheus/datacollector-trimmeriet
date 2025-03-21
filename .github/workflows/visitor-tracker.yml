@@ -2,8 +2,8 @@ name: Visitor Counter
 
 on:
   schedule:
-    # Run every 15 minutes
-    - cron: "*/15 * * * *"
+    # Run a bit before each 15-minute mark to ensure we catch the interval
+    - cron: "2,17,32,47 * * * *"
 
   # Allow manual triggering
   workflow_dispatch:
@@ -11,6 +11,10 @@ on:
 jobs:
   collect-visitor-data:
     runs-on: ubuntu-latest
+
+    # Add permission to allow committing and pushing
+    permissions:
+      contents: write
 
     steps:
       # Check out the repository
@@ -31,20 +35,15 @@ jobs:
 
       # Run the visitor counter script
       - name: Run visitor counter
-        run: python main.py
-
-      # Configure Git
-      - name: Configure Git
         run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
+          python main.py
+          echo "Contents of data directory:"
+          ls -la data/ || echo "Data directory not found"
 
-      # Commit and push changes if any
+      # Commit and push changes using a dedicated action
       - name: Commit and push changes
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add -A
-          git diff-index --quiet HEAD || git commit -m "Update visitor data: $(date +'%Y-%m-%d %H:%M:%S')"
-          git remote set-url origin https://${{ secrets.PAT }}@github.com/${{ github.repository }}
-          git push
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: "Update visitor data [skip ci]"
+          add: "data/"
+          default_author: github_actions
