@@ -14,3 +14,8 @@
 2025-03-22 00:49:24,771 - INFO - Current time: 00:49:24
 2025-03-22 00:49:24,771 - INFO - Target time: 00:50:00
 2025-03-22 00:49:24,771 - INFO - Waiting 36.00 seconds until next minute...
+2025-03-22 00:52:13,405 - WARNING - Process with PID 31184 is not running. Removing stale lock file.
+2025-03-22 00:52:13,406 - INFO - Visitor count tracking started. Press Ctrl+C to exit.
+2025-03-22 00:52:13,406 - INFO - Current time: 00:52:13
+2025-03-22 00:52:13,406 - INFO - Target time: 00:53:00
+2025-03-22 00:52:13,407 - INFO - Waiting 47.00 seconds until next minute...
