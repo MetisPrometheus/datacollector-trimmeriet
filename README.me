@@ -1,0 +1,81 @@
+# Data Collector - Trimmeriet
+
+This repository automatically collects visitor count data every 15 minutes using GitHub Actions. Data is stored in a simple CSV file.
+
+## How It Works
+
+1. GitHub Actions runs the Python script every 15 minutes
+2. The script fetches the current visitor count from the website
+3. The count is appended to a CSV file with timestamp
+4. Changes are automatically committed to the repository
+
+## Data File
+
+The repository maintains a simple CSV file:
+
+- `data/visitor_counts.csv` - Visitor count data with timestamps
+
+## Using This Data
+
+### In a Next.js App
+
+```javascript
+// Example fetching the data in Next.js
+import { useState, useEffect } from 'react';
+
+export default function VisitorStats() {
+  const [visitorData, setVisitorData] = useState([]);
+  
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch(
+        'https://raw.githubusercontent.com/your-username/datacollector-trimmeriet/main/data/visitor_counts.csv'
+      );
+      const csvText = await response.text();
+      
+      // Simple CSV parsing
+      const rows = csvText.split('\n');
+      const headers = rows[0].split(',');
+      const data = rows.slice(1).filter(row => row.trim()).map(row => {
+        const values = row.split(',');
+        return {
+          timestamp: values[0],
+          count: parseFloat(values[1])
+        };
+      });
+      
+      setVisitorData(data);
+    }
+    
+    fetchData();
+  }, []);
+
+  return (
+    <div>
+      <h1>Visitor Count Data</h1>
+      <ul>
+        {visitorData.slice(-10).map((item, index) => (
+          <li key={index}>
+            {item.timestamp}: {item.count} visitors
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+```
+
+## Development
+
+To run this project locally:
+
+1. Clone the repository
+2. Install dependencies: `pip install -r requirements.txt`
+3. Run the collector: `python main.py`
+
+## Files
+
+- `main.py` - Main script that runs the collector
+- `scraper.py` - Contains the visitor count fetching logic
+- `database.py` - Handles saving data to the CSV file
+- `.github/workflows/visitor-tracker.yml` - GitHub Actions workflow that runs every 15 minutes
