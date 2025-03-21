@@ -2,8 +2,8 @@ name: Visitor Counter
 
 on:
   schedule:
-    # Run a bit before each 15-minute mark to ensure we catch the interval
-    - cron: "2,17,32,47 * * * *"
+    # Run a bit before each 15-minute mark
+    - cron: "14,29,44,59 * * * *"
 
   # Allow manual triggering
   workflow_dispatch:
