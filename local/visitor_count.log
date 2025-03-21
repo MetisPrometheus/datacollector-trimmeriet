@@ -1,0 +1,16 @@
+2025-03-22 00:48:50,453 - INFO - Visitor count tracking started. Press Ctrl+C to exit.
+2025-03-22 00:48:50,453 - INFO - Current time: 00:48:50
+2025-03-22 00:48:50,454 - INFO - Target time: 00:49:00
+2025-03-22 00:48:50,454 - INFO - Waiting 10.00 seconds until next minute...
+2025-03-22 00:49:00,554 - INFO - Running job at 2025-03-22 00:49:00
+2025-03-22 00:49:00,703 - INFO - Current visitor count: 0
+2025-03-22 00:49:00,719 - INFO - Saved data to visitor_counts.csv
+2025-03-22 00:49:01,720 - INFO - Current time: 00:49:01
+2025-03-22 00:49:01,720 - INFO - Target time: 00:50:00
+2025-03-22 00:49:01,720 - INFO - Waiting 59.00 seconds until next minute...
+2025-03-22 00:49:20,889 - INFO - Scheduler stopped by user
+2025-03-22 00:49:20,890 - INFO - Lock file removed
+2025-03-22 00:49:24,770 - INFO - Visitor count tracking started. Press Ctrl+C to exit.
+2025-03-22 00:49:24,771 - INFO - Current time: 00:49:24
+2025-03-22 00:49:24,771 - INFO - Target time: 00:50:00
+2025-03-22 00:49:24,771 - INFO - Waiting 36.00 seconds until next minute...
