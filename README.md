@@ -10,62 +10,80 @@ This repository automatically collects visitor count data and weather conditions
 4. All data is appended to a CSV file with timestamp
 5. Changes are automatically committed to the repository
 
-## Data Collection
+## Data File Structure
 
-The repository collects and stores:
+The CSV file (`data/visitor_counts.csv`) contains:
 
-- **Visitor counts**: Number of visitors at Trimmeriet
-- **Weather data**: Temperature, weather conditions, and day/night status
-- **Timestamps**: All data points are rounded to 15-minute intervals
+- timestamp - Date and time (YYYY-MM-DD HH:MM:SS)
+- visitor_count - Number of visitors
+- temperature - Temperature in °C
+- weather_category - Weather condition (clear, cloudy, rainy, snowy, foggy)
+- is_raining - Whether it's raining (yes/no)
+- is_daytime - Whether it's daytime (yes/no)
 
-## Data File
+## Running Locally
 
-The repository maintains a CSV file with the following columns:
+You can run the data collector in two ways:
 
-- `data/visitor_counts.csv`:
-  - timestamp - Date and time (YYYY-MM-DD HH:MM:SS)
-  - visitor_count - Number of visitors
-  - temperature - Temperature in °C
-  - weather_category - Weather condition (clear, cloudy, rainy, snowy, foggy)
-  - is_raining - Whether it's raining (yes/no)
-  - is_daytime - Whether it's daytime (yes/no)
+### Option 1: Main Script (With Weather Data)
 
-## Using This Data
+```bash
+# Install dependencies
+pip install -r requirements.txt
 
-### In a Next.js App
+# Run the collector once
+python main.py
+```
+
+### Option 2: Continuous Local Scheduler
+
+```bash
+# Install dependencies
+pip install requests beautifulsoup4 pandas psutil
+
+# Run the scheduler (runs every minute)
+python scheduler.py
+```
+
+The scheduler will collect visitor counts once per minute and save to a local CSV file. Press Ctrl+C to stop.
+
+## Using This Data in Next.js
 
 ```javascript
 // Example fetching the data in Next.js
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 export default function VisitorStats() {
   const [visitorData, setVisitorData] = useState([]);
-  
+
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(
-        'https://raw.githubusercontent.com/MetisPrometheus/datacollector-trimmeriet/main/data/visitor_counts.csv'
+        "https://raw.githubusercontent.com/MetisPrometheus/datacollector-trimmeriet/main/data/visitor_counts.csv"
       );
       const csvText = await response.text();
-      
+
       // Simple CSV parsing
-      const rows = csvText.split('\n');
-      const headers = rows[0].split(',');
-      const data = rows.slice(1).filter(row => row.trim()).map(row => {
-        const values = row.split(',');
-        return {
-          timestamp: values[0],
-          count: parseFloat(values[1]),
-          temperature: parseFloat(values[2]),
-          weather: values[3],
-          isRaining: values[4] === 'yes',
-          isDaytime: values[5] === 'yes'
-        };
-      });
-      
+      const rows = csvText.split("\n");
+      const headers = rows[0].split(",");
+      const data = rows
+        .slice(1)
+        .filter((row) => row.trim())
+        .map((row) => {
+          const values = row.split(",");
+          return {
+            timestamp: values[0],
+            count: parseFloat(values[1]),
+            temperature: parseFloat(values[2]),
+            weather: values[3],
+            isRaining: values[4] === "yes",
+            isDaytime: values[5] === "yes",
+          };
+        });
+
       setVisitorData(data);
     }
-    
+
     fetchData();
   }, []);
 
@@ -75,8 +93,9 @@ export default function VisitorStats() {
       <ul>
         {visitorData.slice(-10).map((item, index) => (
           <li key={index}>
-            {item.timestamp}: {item.count} visitors, {item.temperature}°C, {item.weather}
-            {item.isRaining ? ' (Raining)' : ''} {item.isDaytime ? '☀️' : '🌙'}
+            {item.timestamp}: {item.count} visitors, {item.temperature}°C,{" "}
+            {item.weather}
+            {item.isRaining ? " (Raining)" : ""} {item.isDaytime ? "☀️" : "🌙"}
           </li>
         ))}
       </ul>
@@ -85,24 +104,6 @@ export default function VisitorStats() {
 }
 ```
 
-## Weather Categories
-
-The weather data is simplified into these categories:
-
-- **clear**: Clear skies (day or night)
-- **cloudy**: Partly cloudy or overcast
-- **rainy**: Any form of rain
-- **snowy**: Snow or sleet
-- **foggy**: Fog conditions
-
-## Development
-
-To run this project locally:
-
-1. Clone the repository
-2. Install dependencies: `pip install -r requirements.txt`
-3. Run the collector: `python main.py`
-
 ## Files
 
 - `main.py` - Main script that runs the collector
@@ -110,4 +111,5 @@ To run this project locally:
 - `weather.py` - Fetches weather data from Yr API
 - `weather_simplifier.py` - Categorizes weather conditions
 - `database.py` - Handles saving data to the CSV file
-- `.github/workflows/visitor-tracker.yml` - GitHub Actions workflow that runs every 15 minutes
+- `scheduler.py` - Local continuous scheduler (runs every minute)
+- `.github/workflows/visitor-tracker.yml` - GitHub Actions workflow
