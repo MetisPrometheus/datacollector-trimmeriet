@@ -21,7 +21,13 @@ class Database:
             with open(self.csv_path, "w", newline="") as f:
                 writer = csv.writer(f)
                 writer.writerow(
-                    ["timestamp", "visitor_count", "temperature", "weather_symbol"]
+                    [
+                        "timestamp",
+                        "visitor_count",
+                        "temperature",
+                        "weather_category",
+                        "is_raining",
+                    ]
                 )
 
     def _round_to_15min_interval(self, dt):
@@ -55,7 +61,11 @@ class Database:
 
         # Get weather data or use placeholder values
         if weather_data is None:
-            weather_data = {"temperature": None, "weather_symbol": "unknown"}
+            weather_data = {
+                "temperature": None,
+                "weather_category": "unknown",
+                "is_raining": "unknown",
+            }
 
         # Append the new row to the CSV
         with open(self.csv_path, "a", newline="") as f:
@@ -65,7 +75,8 @@ class Database:
                     timestamp,
                     visitor_count,
                     weather_data.get("temperature"),
-                    weather_data.get("weather_symbol"),
+                    weather_data.get("weather_category", "unknown"),
+                    weather_data.get("is_raining", "unknown"),
                 ]
             )
 
@@ -73,7 +84,8 @@ class Database:
             "timestamp": timestamp,
             "count": visitor_count,
             "temperature": weather_data.get("temperature"),
-            "weather_symbol": weather_data.get("weather_symbol"),
+            "weather_category": weather_data.get("weather_category", "unknown"),
+            "is_raining": weather_data.get("is_raining", "unknown"),
         }
 
     # Keep the old method for backward compatibility
