@@ -27,3 +27,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime
 2025-03-22 09:00:00,12,8.3,clear,no,yes
 2025-03-22 09:15:00,14,9.5,clear,no,yes
 2025-03-22 09:30:00,12,9.5,clear,no,yes
+2025-03-22 09:45:00,15,9.5,clear,no,yes
