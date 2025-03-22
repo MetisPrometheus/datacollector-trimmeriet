@@ -30,6 +30,12 @@ def main():
         # Store visitor count and weather data
         result = db.store_data(visitor_count, weather_data)
         print(f"Data storage complete.")
+
+        # Print special date information
+        if result["is_holiday"] == "yes" or result["is_vacation_period"] == "yes":
+            print(f"Special date detected: {result['special_date_name']}")
+            print(f"  Is holiday: {result['is_holiday']}")
+            print(f"  Is vacation period: {result['is_vacation_period']}")
     else:
         print("Failed to fetch visitor count")
 

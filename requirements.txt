@@ -1,3 +1,4 @@
 requests>=2.28.0
 beautifulsoup4>=4.11.0
 pytz>=2023.3
+holidays>=0.24
