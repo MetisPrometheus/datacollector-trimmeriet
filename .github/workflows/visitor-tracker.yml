@@ -2,7 +2,7 @@ name: Visitor Counter
 
 on:
   schedule:
-    # Run a bit after each 15-minute mark
+    # Run a bit before each 15-minute mark
     - cron: "14,29,44,59 * * * *"
 
   # Allow manual triggering
@@ -31,7 +31,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests beautifulsoup4 pytz
+          pip install -r requirements.txt
 
       # Run the visitor counter script
       - name: Run visitor counter

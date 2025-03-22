@@ -18,7 +18,7 @@ def simplify_weather_symbol(symbol_code):
 def get_weather_category(symbol_code):
     """
     Convert Yr's detailed weather symbols into basic categories:
-    sunny, cloudy, rainy, snowy, foggy
+    clear, cloudy, rainy, snowy, foggy
 
     Args:
         symbol_code (str): The original weather symbol code from Yr
@@ -26,9 +26,9 @@ def get_weather_category(symbol_code):
     Returns:
         str: Simplified weather category
     """
-    # Sunny/clear conditions
+    # Clear conditions (day or night)
     if "clearsky" in symbol_code or "fair" in symbol_code:
-        return "sunny"
+        return "clear"
 
     # Cloudy conditions
     elif "partlycloudy" in symbol_code or symbol_code == "cloudy":
@@ -69,5 +69,10 @@ def get_simplified_weather_data(weather_data):
     # Add the simplified categories
     weather_data["weather_category"] = get_weather_category(symbol)
     weather_data["is_raining"] = "yes" if "rain" in symbol else "no"
+
+    # Add day/night distinction as a separate feature
+    weather_data["is_daytime"] = (
+        "no" if ("_night" in symbol or "_polartwilight" in symbol) else "yes"
+    )
 
     return weather_data

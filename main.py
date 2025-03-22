@@ -24,6 +24,7 @@ def main():
     print(f"  Raw weather symbol: {weather_data.get('weather_symbol')}")
     print(f"  Simplified category: {weather_data.get('weather_category')}")
     print(f"  Is raining: {weather_data.get('is_raining')}")
+    print(f"  Is daytime: {weather_data.get('is_daytime')}")
 
     if visitor_count is not None:
         # Store visitor count and weather data

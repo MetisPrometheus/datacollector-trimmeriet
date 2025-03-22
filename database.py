@@ -28,6 +28,7 @@ class Database:
                         "temperature",
                         "weather_category",
                         "is_raining",
+                        "is_daytime",
                     ]
                 )
 
@@ -69,6 +70,7 @@ class Database:
                 "temperature": None,
                 "weather_category": "unknown",
                 "is_raining": "unknown",
+                "is_daytime": "unknown",
             }
 
         # Check for duplicate timestamp entries to avoid duplicates
@@ -76,6 +78,7 @@ class Database:
         if os.path.exists(self.csv_path):
             with open(self.csv_path, "r", newline="") as f:
                 reader = csv.reader(f)
+                next(reader, None)  # Skip header
                 for row in reader:
                     if row and row[0] == timestamp:
                         should_append = False
@@ -93,14 +96,16 @@ class Database:
                         weather_data.get("temperature"),
                         weather_data.get("weather_category", "unknown"),
                         weather_data.get("is_raining", "unknown"),
+                        weather_data.get("is_daytime", "unknown"),
                     ]
                 )
 
             # Properly formatted result log
             print(
                 f"Data saved: {timestamp}, {visitor_count} visitors, "
-                + f"{weather_data.get('temperature')}°C, {weather_data.get('weather_category')}, "
-                + f"Rain: {weather_data.get('is_raining')}"
+                f"{weather_data.get('temperature')}°C, {weather_data.get('weather_category')}, "
+                f"Rain: {weather_data.get('is_raining')}, "
+                f"Daytime: {weather_data.get('is_daytime')}"
             )
 
         return {
@@ -109,6 +114,7 @@ class Database:
             "temperature": weather_data.get("temperature"),
             "weather_category": weather_data.get("weather_category", "unknown"),
             "is_raining": weather_data.get("is_raining", "unknown"),
+            "is_daytime": weather_data.get("is_daytime", "unknown"),
         }
 
     # Keep the old method for backward compatibility

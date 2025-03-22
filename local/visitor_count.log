@@ -223,3 +223,15 @@
 2025-03-22 01:26:01,330 - INFO - Current time: 01:26:01
 2025-03-22 01:26:01,331 - INFO - Target time: 01:27:00
 2025-03-22 01:26:01,331 - INFO - Waiting 59.00 seconds until next minute...
+2025-03-22 01:27:00,432 - INFO - Running job at 2025-03-22 01:27:00
+2025-03-22 01:27:00,591 - INFO - Current visitor count: 0
+2025-03-22 01:27:00,598 - INFO - Saved data to visitor_counts.csv
+2025-03-22 01:27:01,598 - INFO - Current time: 01:27:01
+2025-03-22 01:27:01,599 - INFO - Target time: 01:28:00
+2025-03-22 01:27:01,599 - INFO - Waiting 59.00 seconds until next minute...
+2025-03-22 01:28:00,700 - INFO - Running job at 2025-03-22 01:28:00
+2025-03-22 01:28:00,871 - INFO - Current visitor count: 0
+2025-03-22 01:28:00,885 - INFO - Saved data to visitor_counts.csv
+2025-03-22 01:28:01,886 - INFO - Current time: 01:28:01
+2025-03-22 01:28:01,886 - INFO - Target time: 01:29:00
+2025-03-22 01:28:01,886 - INFO - Waiting 59.00 seconds until next minute...
