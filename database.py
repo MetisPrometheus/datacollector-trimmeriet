@@ -20,7 +20,9 @@ class Database:
         if not os.path.exists(self.csv_path):
             with open(self.csv_path, "w", newline="") as f:
                 writer = csv.writer(f)
-                writer.writerow(["timestamp", "visitor_count"])
+                writer.writerow(
+                    ["timestamp", "visitor_count", "temperature", "weather_symbol"]
+                )
 
     def _round_to_15min_interval(self, dt):
         """Round timestamp to nearest 15-minute interval"""
@@ -40,8 +42,8 @@ class Database:
         # Create new datetime with rounded minutes and zeroed seconds
         return dt.replace(minute=rounded_minute, second=0, microsecond=0)
 
-    def store_visitor_count(self, count):
-        """Store a visitor count with timestamp on exact 15 min interval"""
+    def store_data(self, visitor_count, weather_data=None):
+        """Store visitor count and weather data with timestamp on exact 15 min interval"""
         now = datetime.datetime.now()
 
         # Round to nearest 15-minute interval
@@ -51,9 +53,30 @@ class Database:
         print(f"Actual time: {now.strftime('%Y-%m-%d %H:%M:%S')}")
         print(f"Rounded to: {timestamp}")
 
-        # Simply append the new row to the CSV
+        # Get weather data or use placeholder values
+        if weather_data is None:
+            weather_data = {"temperature": None, "weather_symbol": "unknown"}
+
+        # Append the new row to the CSV
         with open(self.csv_path, "a", newline="") as f:
             writer = csv.writer(f)
-            writer.writerow([timestamp, count])
+            writer.writerow(
+                [
+                    timestamp,
+                    visitor_count,
+                    weather_data.get("temperature"),
+                    weather_data.get("weather_symbol"),
+                ]
+            )
 
-        return {"timestamp": timestamp, "count": count}
+        return {
+            "timestamp": timestamp,
+            "count": visitor_count,
+            "temperature": weather_data.get("temperature"),
+            "weather_symbol": weather_data.get("weather_symbol"),
+        }
+
+    # Keep the old method for backward compatibility
+    def store_visitor_count(self, count, weather_data=None):
+        """Store a visitor count with timestamp on exact 15 min interval"""
+        return self.store_data(count, weather_data)
