@@ -4,7 +4,9 @@ import logging
 logger = logging.getLogger(__name__)
 
 
-def fetch_weather_data(latitude=58.853, longitude=5.732):
+def fetch_weather_data(
+    latitude=58.8534, longitude=5.7317
+):  # Default to Sandnes, Norway
     """
     Fetch current weather data from Yr's MET API
 
@@ -20,7 +22,7 @@ def fetch_weather_data(latitude=58.853, longitude=5.732):
 
     # Headers required by Yr API - you MUST include a proper User-Agent
     headers = {
-        "User-Agent": "datacollector-trimmeriet/1.0 github.com/MetisPrometheus (ivar.walskaar@gmail.com)",
+        "User-Agent": "datacollector-trimmeriet/1.0 github.com/MetisPrometheus (your.email@example.com)",
     }
 
     # Parameters for the API request
@@ -30,6 +32,7 @@ def fetch_weather_data(latitude=58.853, longitude=5.732):
     }
 
     try:
+        print(f"Fetching weather data for coordinates: {latitude}, {longitude}")
         response = requests.get(url, headers=headers, params=params, timeout=10)
         response.raise_for_status()  # Raise exception for HTTP errors
 
@@ -52,7 +55,7 @@ def fetch_weather_data(latitude=58.853, longitude=5.732):
 
         weather_data = {"temperature": temperature, "weather_symbol": weather_symbol}
 
-        print(f"Current weather: {temperature}°C, {weather_symbol}")
+        print(f"Weather API response: {temperature}°C, {weather_symbol}")
         return weather_data
 
     except Exception as e:

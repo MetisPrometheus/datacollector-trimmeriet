@@ -2,6 +2,7 @@ import os
 import datetime
 import csv
 import logging
+import pytz  # Add pytz for timezone handling
 
 logger = logging.getLogger(__name__)
 
@@ -50,12 +51,15 @@ class Database:
 
     def store_data(self, visitor_count, weather_data=None):
         """Store visitor count and weather data with timestamp on exact 15 min interval"""
-        now = datetime.datetime.now()
+        # Use local timezone (Norway)
+        norway_tz = pytz.timezone("Europe/Oslo")
+        now = datetime.datetime.now(norway_tz)
 
         # Round to nearest 15-minute interval
         rounded_time = self._round_to_15min_interval(now)
         timestamp = rounded_time.strftime("%Y-%m-%d %H:%M:%S")
 
+        # Proper formatting for logging
         print(f"Actual time: {now.strftime('%Y-%m-%d %H:%M:%S')}")
         print(f"Rounded to: {timestamp}")
 
@@ -67,17 +71,36 @@ class Database:
                 "is_raining": "unknown",
             }
 
-        # Append the new row to the CSV
-        with open(self.csv_path, "a", newline="") as f:
-            writer = csv.writer(f)
-            writer.writerow(
-                [
-                    timestamp,
-                    visitor_count,
-                    weather_data.get("temperature"),
-                    weather_data.get("weather_category", "unknown"),
-                    weather_data.get("is_raining", "unknown"),
-                ]
+        # Check for duplicate timestamp entries to avoid duplicates
+        should_append = True
+        if os.path.exists(self.csv_path):
+            with open(self.csv_path, "r", newline="") as f:
+                reader = csv.reader(f)
+                for row in reader:
+                    if row and row[0] == timestamp:
+                        should_append = False
+                        print(f"Skipping duplicate entry for timestamp {timestamp}")
+                        break
+
+        # Append the new row to the CSV if not a duplicate
+        if should_append:
+            with open(self.csv_path, "a", newline="") as f:
+                writer = csv.writer(f)
+                writer.writerow(
+                    [
+                        timestamp,
+                        visitor_count,
+                        weather_data.get("temperature"),
+                        weather_data.get("weather_category", "unknown"),
+                        weather_data.get("is_raining", "unknown"),
+                    ]
+                )
+
+            # Properly formatted result log
+            print(
+                f"Data saved: {timestamp}, {visitor_count} visitors, "
+                + f"{weather_data.get('temperature')}°C, {weather_data.get('weather_category')}, "
+                + f"Rain: {weather_data.get('is_raining')}"
             )
 
         return {

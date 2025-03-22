@@ -10,24 +10,25 @@ def main():
 
     # Fetch visitor count
     visitor_count = fetch_visitor_count()
+    print(f"Fetched visitor count: {visitor_count}")
 
-    # Fetch weather data
-    # Update coordinates to your specific location
-    weather_data = fetch_weather_data(
-        latitude=58.853, longitude=5.732
-    )  # Trimmeriet - Maxi Sandnes
+    # Fetch weather data - Use coordinates for Sandnes, Norway
+    weather_data = fetch_weather_data(latitude=58.8534, longitude=5.7317)
 
     # Add simplified weather categories
     weather_data = get_simplified_weather_data(weather_data)
 
+    # Print weather details separately with proper formatting
+    print(f"Weather details:")
+    print(f"  Temperature: {weather_data.get('temperature')}°C")
+    print(f"  Raw weather symbol: {weather_data.get('weather_symbol')}")
+    print(f"  Simplified category: {weather_data.get('weather_category')}")
+    print(f"  Is raining: {weather_data.get('is_raining')}")
+
     if visitor_count is not None:
         # Store visitor count and weather data
-        db.store_data(visitor_count, weather_data)
-        print(f"Successfully stored data: {visitor_count} visitors")
-        print(
-            f"Weather: {weather_data.get('temperature')}°C, {weather_data.get('weather_category')}"
-        )
-        print(f"Is it raining? {weather_data.get('is_raining')}")
+        result = db.store_data(visitor_count, weather_data)
+        print(f"Data storage complete.")
     else:
         print("Failed to fetch visitor count")
 
