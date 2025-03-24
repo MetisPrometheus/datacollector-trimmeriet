@@ -220,3 +220,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2025-03-24 14:45:00,21,9.1,cloudy,no,yes,no,no,
 2025-03-24 15:00:00,18,9.1,cloudy,no,yes,no,no,
 2025-03-24 15:15:00,23,8.6,cloudy,no,yes,no,no,
+2025-03-24 15:30:00,20,8.6,cloudy,no,yes,no,no,
