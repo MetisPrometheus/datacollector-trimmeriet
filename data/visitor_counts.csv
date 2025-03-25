@@ -326,3 +326,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2025-03-25 20:45:00,11,7.4,cloudy,no,yes,no,no,
 2025-03-25 21:00:00,10,7.4,cloudy,no,yes,no,no,
 2025-03-25 21:15:00,9,7.0,cloudy,no,no,no,no,
+2025-03-25 21:30:00,7,7.0,cloudy,no,no,no,no,
