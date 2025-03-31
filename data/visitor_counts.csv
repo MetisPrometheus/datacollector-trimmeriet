@@ -788,3 +788,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2025-03-31 09:45:00,29,2.2,foggy,no,yes,no,no,
 2025-03-31 10:00:00,30,2.2,foggy,no,yes,no,no,
 2025-03-31 10:30:00,28,4.6,cloudy,no,yes,no,no,
+2025-03-31 10:45:00,24,4.6,cloudy,no,yes,no,no,
