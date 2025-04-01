@@ -888,3 +888,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2025-04-01 14:00:00,14,13.3,cloudy,no,yes,no,no,
 2025-04-01 14:30:00,15,13.3,cloudy,no,yes,no,no,
 2025-04-01 14:45:00,14,13.5,cloudy,no,yes,no,no,
+2025-04-01 15:15:00,18,13.5,cloudy,no,yes,no,no,
