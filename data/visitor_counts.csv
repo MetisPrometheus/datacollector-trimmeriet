@@ -1036,3 +1036,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2025-04-03 09:15:00,16,5.3,cloudy,no,yes,no,no,
 2025-04-03 09:30:00,17,5.3,cloudy,no,yes,no,no,
 2025-04-03 09:45:00,20,4.7,cloudy,no,yes,no,no,
+2025-04-03 10:00:00,24,4.7,cloudy,no,yes,no,no,
