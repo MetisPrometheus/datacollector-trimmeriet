@@ -1204,3 +1204,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2025-04-05 09:00:00,13,1.7,clear,no,yes,no,no,
 2025-04-05 09:15:00,14,3.7,clear,no,yes,no,no,
 2025-04-05 09:30:00,13,3.7,clear,no,yes,no,no,
+2025-04-05 09:45:00,15,3.7,clear,no,yes,no,no,
