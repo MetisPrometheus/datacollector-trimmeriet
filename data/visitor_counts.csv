@@ -1690,3 +1690,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2025-04-11 05:00:00,1,7.7,rainy,yes,yes,no,no,
 2025-04-11 05:30:00,1,7.7,rainy,yes,yes,no,no,
 2025-04-11 05:45:00,2,7.8,rainy,yes,yes,no,no,
+2025-04-11 06:00:00,5,7.8,rainy,yes,yes,no,no,
