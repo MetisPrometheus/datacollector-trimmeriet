@@ -1812,3 +1812,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2025-04-12 14:45:00,10,14.0,cloudy,no,yes,no,no,
 2025-04-12 15:15:00,10,13.6,cloudy,no,yes,no,no,
 2025-04-12 15:30:00,12,13.6,cloudy,no,yes,no,no,
+2025-04-12 15:45:00,11,14.2,cloudy,no,yes,no,no,
