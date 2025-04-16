@@ -2173,3 +2173,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2025-04-16 23:30:00,5,10.0,cloudy,no,yes,no,no,
 2025-04-16 23:45:00,3,10.3,cloudy,no,yes,no,no,
 2025-04-17 00:00:00,4,10.3,cloudy,no,yes,yes,no,Maundy Thursday
+2025-04-17 00:15:00,4,10.3,cloudy,no,yes,yes,no,Maundy Thursday
