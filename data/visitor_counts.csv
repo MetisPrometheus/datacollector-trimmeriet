@@ -3270,3 +3270,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2025-04-30 06:15:00,6,10.3,cloudy,no,yes,no,no,
 2025-04-30 06:30:00,10,10.3,cloudy,no,yes,no,no,
 2025-04-30 06:45:00,9,10.3,cloudy,no,yes,no,no,
+2025-04-30 07:00:00,9,10.2,cloudy,no,yes,no,no,
