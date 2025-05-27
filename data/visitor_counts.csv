@@ -5568,3 +5568,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2025-05-28 00:30:00,3,10.0,cloudy,no,no,no,yes,Eksamensperiode (Exam Period)
 2025-05-28 00:45:00,3,10.0,cloudy,no,no,no,yes,Eksamensperiode (Exam Period)
 2025-05-28 01:00:00,1,10.0,cloudy,no,no,no,yes,Eksamensperiode (Exam Period)
+2025-05-28 01:15:00,2,10.6,cloudy,no,yes,no,yes,Eksamensperiode (Exam Period)
