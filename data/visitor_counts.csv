@@ -6322,3 +6322,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2025-06-06 11:15:00,21,11.9,cloudy,no,yes,no,yes,Eksamensperiode (Exam Period)
 2025-06-06 11:30:00,22,11.9,cloudy,no,yes,no,yes,Eksamensperiode (Exam Period)
 2025-06-06 11:45:00,19,11.9,cloudy,no,yes,no,yes,Eksamensperiode (Exam Period)
+2025-06-06 12:00:00,20,13.1,rainy,yes,yes,no,yes,Eksamensperiode (Exam Period)
