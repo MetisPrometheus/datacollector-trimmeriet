@@ -12118,3 +12118,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2025-08-20 11:45:00,9,16.7,cloudy,no,yes,no,no,
 2025-08-20 12:00:00,9,16.5,cloudy,no,yes,no,no,
 2025-08-20 12:15:00,10,16.5,cloudy,no,yes,no,no,
+2025-08-20 12:30:00,15,17.3,cloudy,no,yes,no,no,
