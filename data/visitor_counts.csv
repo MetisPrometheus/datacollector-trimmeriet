@@ -12270,3 +12270,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2025-08-22 08:00:00,7,10.5,cloudy,no,yes,no,no,
 2025-08-22 08:30:00,7,10.5,cloudy,no,yes,no,no,
 2025-08-22 08:45:00,7,10.9,cloudy,no,yes,no,no,
+2025-08-22 09:00:00,8,10.9,cloudy,no,yes,no,no,
