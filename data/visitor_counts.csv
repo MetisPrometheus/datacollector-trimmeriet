@@ -12670,3 +12670,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2025-08-27 02:15:00,1,16.3,rainy,yes,yes,no,no,
 2025-08-27 02:30:00,0,16.3,rainy,yes,yes,no,no,
 2025-08-27 03:15:00,0,16.0,cloudy,no,yes,no,no,
+2025-08-27 03:45:00,0,17.0,cloudy,no,yes,no,no,
