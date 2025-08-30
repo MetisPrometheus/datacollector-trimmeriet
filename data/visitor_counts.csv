@@ -12980,3 +12980,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2025-08-30 20:00:00,0,18.8,cloudy,no,yes,no,no,
 2025-08-30 20:15:00,0,18.8,cloudy,no,yes,no,no,
 2025-08-30 20:30:00,0,17.5,rainy,yes,yes,no,no,
+2025-08-30 20:45:00,0,17.5,rainy,yes,yes,no,no,
