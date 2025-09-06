@@ -13586,3 +13586,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2025-09-07 01:00:00,1,12.4,clear,no,no,no,no,
 2025-09-07 01:15:00,1,12.0,clear,no,no,no,no,
 2025-09-07 01:30:00,1,12.0,clear,no,no,no,no,
+2025-09-07 01:45:00,0,12.0,clear,no,no,no,no,
