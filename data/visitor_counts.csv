@@ -14511,3 +14511,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2025-09-18 01:45:00,2,13.2,rainy,yes,yes,no,no,
 2025-09-18 02:15:00,2,13.2,rainy,yes,yes,no,no,
 2025-09-18 02:30:00,2,13.2,rainy,yes,yes,no,no,
+2025-09-18 03:15:00,0,13.0,rainy,yes,yes,no,no,
