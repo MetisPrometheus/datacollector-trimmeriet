@@ -15736,3 +15736,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2025-10-02 18:15:00,1,12.6,cloudy,no,yes,no,no,
 2025-10-02 18:30:00,0,12.6,cloudy,no,yes,no,no,
 2025-10-02 18:45:00,0,12.6,cloudy,no,yes,no,no,
+2025-10-02 19:00:00,0,12.5,cloudy,no,yes,no,no,
