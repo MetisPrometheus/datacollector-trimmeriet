@@ -17329,3 +17329,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2025-10-21 20:30:00,0,12.3,rainy,yes,yes,no,no,
 2025-10-21 20:45:00,0,12.1,cloudy,no,yes,no,no,
 2025-10-21 21:00:00,0,12.1,cloudy,no,yes,no,no,
+2025-10-21 21:15:00,0,12.2,cloudy,no,yes,no,no,
