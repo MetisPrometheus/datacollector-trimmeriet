@@ -17388,3 +17388,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2025-10-22 13:45:00,0,12.4,rainy,yes,yes,no,no,
 2025-10-22 14:00:00,0,11.7,rainy,yes,yes,no,no,
 2025-10-22 14:30:00,1,11.7,rainy,yes,yes,no,no,
+2025-10-22 14:45:00,2,12.3,cloudy,no,yes,no,no,
