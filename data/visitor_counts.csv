@@ -17518,3 +17518,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2025-10-24 04:30:00,0,12.3,rainy,yes,yes,no,no,
 2025-10-24 04:45:00,1,12.3,rainy,yes,yes,no,no,
 2025-10-24 05:15:00,3,12.0,rainy,yes,yes,no,no,
+2025-10-24 05:45:00,4,12.0,rainy,yes,yes,no,no,
