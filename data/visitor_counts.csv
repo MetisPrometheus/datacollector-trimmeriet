@@ -18001,3 +18001,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2025-10-30 00:45:00,0,7.0,cloudy,no,yes,no,no,
 2025-10-30 01:15:00,0,7.7,rainy,yes,yes,no,no,
 2025-10-30 01:45:00,0,7.7,rainy,yes,yes,no,no,
+2025-10-30 02:15:00,0,7.3,rainy,yes,yes,no,no,
