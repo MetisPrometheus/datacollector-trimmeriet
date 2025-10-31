@@ -18113,3 +18113,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2025-10-31 11:00:00,2,8.6,cloudy,no,yes,no,no,
 2025-10-31 11:15:00,5,8.6,cloudy,no,yes,no,no,
 2025-10-31 11:30:00,6,8.9,cloudy,no,yes,no,no,
+2025-10-31 11:45:00,8,8.9,cloudy,no,yes,no,no,
