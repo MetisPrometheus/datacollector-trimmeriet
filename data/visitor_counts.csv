@@ -18576,3 +18576,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2025-11-06 01:15:00,0,13.2,cloudy,no,yes,no,no,
 2025-11-06 01:45:00,0,13.2,cloudy,no,yes,no,no,
 2025-11-06 02:15:00,0,13.0,rainy,yes,yes,no,no,
+2025-11-06 02:45:00,0,12.8,rainy,yes,yes,no,no,
