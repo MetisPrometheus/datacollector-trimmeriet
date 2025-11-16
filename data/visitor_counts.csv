@@ -19433,3 +19433,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2025-11-16 12:30:00,6,5.4,rainy,yes,yes,no,no,
 2025-11-16 12:45:00,3,5.4,rainy,yes,yes,no,no,
 2025-11-16 13:00:00,5,5.9,cloudy,no,yes,no,no,
+2025-11-16 13:30:00,7,5.9,cloudy,no,yes,no,no,
