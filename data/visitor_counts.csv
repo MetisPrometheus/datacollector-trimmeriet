@@ -21346,3 +21346,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2025-12-10 19:30:00,16,9.4,rainy,yes,yes,no,no,
 2025-12-10 19:45:00,18,9.3,rainy,yes,yes,no,no,
 2025-12-10 20:00:00,17,9.3,rainy,yes,yes,no,no,
+2025-12-10 20:15:00,13,9.3,cloudy,no,yes,no,no,
