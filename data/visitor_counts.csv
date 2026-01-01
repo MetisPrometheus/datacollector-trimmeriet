@@ -22988,3 +22988,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2026-01-01 15:30:00,0,5.3,rainy,yes,yes,yes,no,New Year's Day
 2026-01-01 15:45:00,0,5.3,rainy,yes,yes,yes,no,New Year's Day
 2026-01-01 16:00:00,0,5.3,rainy,yes,yes,yes,no,New Year's Day
+2026-01-01 16:15:00,0,5.1,cloudy,no,yes,yes,no,New Year's Day
