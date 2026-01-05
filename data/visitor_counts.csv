@@ -23268,3 +23268,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2026-01-05 08:15:00,0,-7.4,clear,no,no,no,no,
 2026-01-05 08:30:00,0,-7.0,cloudy,no,no,no,no,
 2026-01-05 08:45:00,0,-7.0,cloudy,no,no,no,no,
+2026-01-05 09:00:00,0,-5.4,cloudy,no,yes,no,no,
