@@ -23773,3 +23773,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2026-01-12 09:45:00,0,0.1,snowy,no,yes,no,no,
 2026-01-12 10:15:00,0,0.5,cloudy,no,yes,no,no,
 2026-01-12 10:45:00,0,0.5,cloudy,no,yes,no,no,
+2026-01-12 11:00:00,0,0.5,snowy,no,yes,no,no,
