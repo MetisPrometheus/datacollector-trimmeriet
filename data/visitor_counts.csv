@@ -23959,3 +23959,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2026-01-15 02:15:00,0,4.1,rainy,yes,yes,no,no,
 2026-01-15 02:45:00,0,4.4,cloudy,no,yes,no,no,
 2026-01-15 03:45:00,0,4.5,cloudy,no,yes,no,no,
+2026-01-15 04:15:00,0,4.8,cloudy,no,yes,no,no,
