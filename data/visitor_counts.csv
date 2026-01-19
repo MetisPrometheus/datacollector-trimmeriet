@@ -24283,3 +24283,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2026-01-19 14:15:00,0,5.1,cloudy,no,yes,no,no,
 2026-01-19 14:45:00,0,5.1,cloudy,no,yes,no,no,
 2026-01-19 15:00:00,1,5.0,cloudy,no,yes,no,no,
+2026-01-19 15:30:00,2,5.0,cloudy,no,yes,no,no,
