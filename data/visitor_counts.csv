@@ -25812,3 +25812,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2026-02-14 21:30:00,2,-0.7,cloudy,no,no,no,no,
 2026-02-14 21:45:00,2,-0.5,cloudy,no,no,no,no,
 2026-02-14 22:00:00,1,-0.5,cloudy,no,no,no,no,
+2026-02-14 22:15:00,1,-1.0,cloudy,no,yes,no,no,
