@@ -25949,3 +25949,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2026-02-17 09:15:00,0,-0.7,cloudy,no,yes,no,no,
 2026-02-17 09:30:00,0,-0.7,cloudy,no,yes,no,no,
 2026-02-17 10:00:00,0,-0.3,cloudy,no,yes,no,no,
+2026-02-17 10:30:00,1,-0.3,cloudy,no,yes,no,no,
