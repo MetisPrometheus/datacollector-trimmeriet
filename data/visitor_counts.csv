@@ -26066,3 +26066,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2026-02-19 19:00:00,0,-0.6,cloudy,no,no,no,no,
 2026-02-19 19:30:00,0,-0.6,cloudy,no,no,no,no,
 2026-02-19 20:00:00,0,-1.0,cloudy,no,yes,no,no,
+2026-02-19 20:30:00,0,-1.0,cloudy,no,yes,no,no,
