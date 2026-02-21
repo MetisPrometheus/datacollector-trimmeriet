@@ -26154,3 +26154,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2026-02-21 10:45:00,9,4.1,cloudy,no,yes,no,no,
 2026-02-21 11:00:00,5,4.7,cloudy,no,yes,no,no,
 2026-02-21 11:30:00,7,4.7,cloudy,no,yes,no,no,
+2026-02-21 11:45:00,6,4.7,clear,no,yes,no,no,
