@@ -26240,3 +26240,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2026-02-22 18:30:00,2,4.4,cloudy,no,yes,no,no,
 2026-02-22 18:45:00,3,4.1,cloudy,no,yes,no,no,
 2026-02-22 19:00:00,4,4.1,cloudy,no,yes,no,no,
+2026-02-22 19:30:00,7,4.0,rainy,yes,yes,no,no,
