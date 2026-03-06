@@ -26852,3 +26852,4 @@ timestamp,visitor_count,temperature,weather_category,is_raining,is_daytime,is_ho
 2026-03-06 06:45:00,0,7.3,clear,no,no,no,no,
 2026-03-06 07:15:00,0,7.3,clear,no,no,no,no,
 2026-03-06 07:30:00,0,6.9,cloudy,no,yes,no,no,
+2026-03-06 08:00:00,0,7.1,cloudy,no,yes,no,no,
